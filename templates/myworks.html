@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+{% block title %}
+Çalışmalarım
+{% endblock title %}
+{% block body %}
+<section id="ıknow-sec1">
+    <div class="iknow-text">
+        <h1>Bildiğim Teknolojiler</h1>
+        <p>Beni discord veya iletişim kısmından herhangi bir projeye davet ederken sadece bildiğim teknolojilere bakmayın. Buraya sonradan eklenecektir.</p>
+    </div>
+    <div class="iknow-slider">
+        <div class="iknow-slider-text">
+            <h2 class="iknow-slider-title">
+                Python
+            </h2>
+            <p class="iknow-slider-p">
+                Django, Flask, OpenCV, PyQt5...
+            </p>
+        </div>
+        <div class="iknow-slider-img">
+            <img src="{{ url_for('static', filename='img/sliderpython.jpg') }}" id="ik-sl-img">
+            <div class="ik-arrow">
+                <i class="fas fa-caret-square-left"></i>
+                <i class="fas fa-caret-square-right"></i>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<br><br><br><br><br><br><br><br>
+<div id="title-works-main">
+    <h1>Çalışmalarım</h1>
+    <p>Buralar düzenlenecektir.</p>
+</div>
+
+<div class="iknow-container">
+    <i class="fas fa-angle-left"></i>
+    <section id="ıknow-sec2">
+        <div class="iknow-slider2">
+
+            <div class="iknow-slider-text2">
+                <h2 class="iknow-slider-title2" id="title1">
+                    İlk Tasarımım
+                </h2>
+                <p class="iknow-slider-p2" id="paragf1">
+                    Bir otel sitesini baz alarak yaptığım bir site.
+                </p>
+                
+            </div>
+
+            <div class="iknow-slider-img2">
+                <img src="{{ url_for('static', filename='img/website1.PNG') }}" id="know-img1" class="ik-sl-img2">
+                <div class="ik-arrow2">
+                    <i class="fas fa-chevron-circle-left" id="sec-left1"></i>
+                    <i class="fas fa-chevron-circle-right" id="sec-right1"></i>
+                </div>
+                
+            </div>
+    
+        </div>
+    </section>
+    <section id="ıknow-sec2">
+        <div class="iknow-slider2">
+            <div class="iknow-slider-text2">
+                <h2 class="iknow-slider-title2" id="title2">
+                    Sunucum için web sitesi.
+                </h2>
+                <p class="iknow-slider-p2" id="paragf2">
+                    Kendi discord sunucum için yapmıştım.
+                </p>
+                
+            </div>
+            <div class="iknow-slider-img2">
+                <img src="{{ url_for('static', filename='img/tt1.PNG') }}" id="know-img2" class="ik-sl-img2">
+                <div class="ik-arrow2">
+                    <i class="fas fa-chevron-circle-left" id="sec-left2"></i>
+                    <i class="fas fa-chevron-circle-right" id="sec-right2"></i>
+                </div>
+                
+            </div>
+    
+        </div>
+    </section>
+    <section id="ıknow-sec2">
+        <div class="iknow-slider2">
+            <div class="iknow-slider-text2">
+                <h2 class="iknow-slider-title2" id="title3">
+                    Butik Site Tasarımı
+                </h2>
+                <p class="iknow-slider-p2" id="paragf3">
+                    Butik sitesi tarzında bir tasarım.
+                </p>
+                
+            </div>
+            <div class="iknow-slider-img2">
+                <img src="{{ url_for('static', filename='img/bt1.png') }}" class="ik-sl-img2" id="know-img3">
+                <div class="ik-arrow2">
+                    <i class="fas fa-chevron-circle-left" id="sec-left3"></i>
+                    <i class="fas fa-chevron-circle-right" id="sec-right3"></i>
+                </div>
+                
+            </div>
+    
+        </div>
+    </section>
+    <i class="fas fa-angle-right"></i>
+</div>
+{% endblock body %}
+
+{% block script %}
+<script>
+
+    var models = [
+        {
+            title:"Python",
+            titleBot:"Django, Flask, OpenCV, PyQt5",
+            image:"{{ url_for('static', filename='img/sliderpython.jpg') }}"
+        },
+        {
+            title:"Web Geliştirme",
+            titleBot:"Html5, Css3, Javascript, Jquery, Angular...",
+            image:"{{ url_for('static', filename='img/sliderweb.png') }}"
+        },
+        {
+            title:"Oyun Geliştirme",
+            titleBot:"C# ve Unity",
+            image:"{{ url_for('static', filename='img/slidergame.jpg') }}"
+        }   
+    ]
+
+    var works1 =
+    [
+        {
+            img:"{{ url_for('static', filename='img/website1.PNG') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/website2.PNG') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/website3.PNG') }}"
+        },
+    ]
+    var works2 =
+    [
+        {
+            img:"{{ url_for('static', filename='img/tt1.PNG') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/tt2.PNG') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/tt3.PNG') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/tt4.PNG') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/tt5.PNG') }}"
+        },
+    ]
+    var works3 =
+    [
+        {
+            img:"{{ url_for('static', filename='img/bt1.png') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/bt2.png') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/bt3.png') }}"
+        },
+        {
+            img:"{{ url_for('static', filename='img/bt4.png') }}"
+        },
+    ]
+
+    var index1 = 1;
+    function ChangePicture1(index1){
+        document.querySelector("#know-img1").setAttribute("src" ,works1[index1].img); 
+    }
+    var index2 = 1;
+    function ChangePicture2(index2){
+        document.querySelector("#know-img2").setAttribute("src" ,works2[index2].img);  
+    }
+    var index3 = 1;
+    function ChangePicture3(index3){
+        document.querySelector("#know-img3").setAttribute("src" ,works3[index3].img); 
+    }
+    document.querySelector("#sec-left1").addEventListener("click" , function(){
+        if(index1 < 0){
+            index1 =(works1.length)-1 ;
+        }else{
+            index1 -=1;
+            
+        }
+        ChangePicture1(index1);
+    });
+    document.querySelector("#sec-right1").addEventListener("click" , function(){
+        if(index1 >(works1.length)-1 ){
+            index1 = 0;
+        }else{
+            index1+=1;
+            
+        }
+        ChangePicture1(index1);
+    });
+
+    document.querySelector("#sec-left2").addEventListener("click" , function(){
+        if(index2 < 0){
+            index2 =(works2.length)-1 ;
+        }else{
+            index2-=1;
+            
+        }
+        ChangePicture2(index2);
+    });
+    document.querySelector("#sec-right2").addEventListener("click" , function(){
+        if(index2 >(works2.length)-1 ){
+            index2 = 0;
+        }else{
+            index2+=1;
+            
+        }
+        ChangePicture2(index2);
+    });
+
+    document.querySelector("#sec-left3").addEventListener("click" , function(){
+        if(index3 < 0){
+            index3 =(works3.length)-1 ;
+        }else{
+            index3-=1;
+        }
+        ChangePicture3(index3);
+    });
+    document.querySelector("#sec-right3").addEventListener("click" , function(){
+        if(index3 >(works3.length)-1 ){
+            index3 = 0;
+        }else{
+            index3+=1;
+        }
+        ChangePicture3(index3);
+    });
+
+    var index = 0;
+
+    function SelectCard(index){
+        document.querySelector(".iknow-slider-title").innerHTML = models[index].title;
+        document.querySelector(".iknow-slider-p").innerHTML = models[index].titleBot;
+        document.querySelector("#ik-sl-img").setAttribute("src" , models[index].image);
+    }
+
+    document.querySelector(".fa-caret-square-left").addEventListener("click", function(){
+        if (index <= 0){
+            index = (models.length) - 1;
+        }else{
+            index -= 1;
+        }
+        SelectCard(index);
+  
+    });
+    document.querySelector(".fa-caret-square-right").addEventListener("click", function(){
+        if (index > (models.length-2)){
+            index = 0;
+        }else{
+            index += 1;
+        }
+        SelectCard(index);
+    });
+
+
+</script>
+
+{% endblock script %}

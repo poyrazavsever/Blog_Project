@@ -1,0 +1,38 @@
+<nav id="navigation-bar">
+    <div class="main-title">
+        <h1>Poyraz Avsever</h1>
+        <ul class="navbar-left">
+            <li>
+                <a href="/">Anasayfa</a>
+            </li>
+            <li>
+                <a href="/about">Hakkımda</a>
+            </li>
+            <li>
+                <a href="/myworks">Çalışmalarım</a>
+            </li>
+            <li>
+                <a href="/contact">İletişim</a>
+            </li>
+            <li>
+                <a href="/articles">Yazılar</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-sec">
+        <ul class="navbar-right">
+            {% if session%}
+            <li>
+                <a href="/acount">Hesabınız</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/login">Giriş</a>
+            </li>
+            <li>
+                <a href="/sign">Kayıt</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

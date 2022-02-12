@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block title %}
+İletişim
+{% endblock title %}
+
+{% block body %}
+<div class="contact-section">
+
+    <form method = "post" id="messages-form">
+        {% from "includes/formhelpers.html" import render_field %}
+    
+        {{ render_field(form.name,class = "form-control inputt1") }}
+        {{ render_field(form.email,class = "form-control inputt2") }}
+        {{ render_field(form.message,class = "form-control inputt3") }}
+        <br>
+        <button type="submit" class="btn btn-primary" id="register-btn">Gönder</button>
+    
+    
+    </form>
+
+    <div class="other-contact-link">
+        <h3>Bana buralardan da ulaşabilirsiniz.</h3>
+        <br><br>
+        <div class="email-contact-sec">
+            <h4 class="contact-title">E-Mail ile</h4>
+            <p>➤
+                <a href = "mailto: poyrazavsever@gmail.com" class="email-ctn">
+                poyrazavsever@gmail.com
+                </a>
+
+            </p>
+            <p>➤
+                <a href = "mailto: poyrazavsever@hotmail.com" class="email-ctn">                       poyrazavsever@hotmail.com
+                </a>
+
+            </p>
+        </div>
+
+        <div class="discord-link">
+            <h4 class="contact-title">Discord ile</h4>
+            <p><span><i class="fab fa-discord"></i> Discord :</span> Poyraz#1000</p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}
+
+{% block script %}
+
+{% endblock script %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}
+Anasayfa
+{% endblock title %}
+{% block body %}
+<section class="header-text">
+    <div class="text-section">
+        <h1>Merhaba!</h1>
+        <p>Artık projelerimi bu sitede ve githubta paylaşmaya başlıyorum. Sizlerde githubtan ve bu siteden yaptığım çalışmaları takip edebilirsiniz.</p>
+        <span>Siteme hoş geldiniz!</span>
+    </div>
+
+    <div class="image-section">
+        <img src="{{ url_for('static', filename='img/header2.jpg') }}" alt="" id="header2-img">
+    </div>
+
+</section>
+
+{% endblock body %}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@100;200;500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Poyraz Avsever |{% block title  %}
+    
+    {% endblock title %}</title>
+    <style>
+        :root{
+            --main-color:rgb(119, 119, 119);
+            --sc-color:rgb(241, 241, 241);
+            --pr-color:#3683ff;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size:10px;
+        }
+        body{
+            font-size:1.6rem;
+            font-family:'Open Sans', sans-serif;
+        }
+        ul{list-style-type:none;}
+        a{text-decoration: none;}
+
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'Roboto', sans-serif;
+        }
+        p{font-family: 'Open Sans', sans-serif;}
+
+        #navigation-bar{
+            display:flex;
+            align-items: center;
+            justify-content:space-between;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            background-color:rgb(241, 241, 241);
+            opacity:0.98;
+        }
+        .main-title{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .main-title h1{
+            font-size: 3.5rem;
+            padding:0 2rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200;
+        }
+        .navbar-left li{
+            display: inline-block;
+            padding-left:4rem;
+            font-size: 2rem;
+        }
+        .navbar-right li{
+            display: inline-block;
+            font-size: 2rem;
+            padding-right: 3rem;
+        }
+        .navbar-right li a, .navbar-left li a{
+            color: black;
+        }
+        .navbar-right li a:hover, .navbar-left li a:hover {
+            border-bottom: 2px solid rgb(0, 0, 0);
+        }
+        .container{
+            width: 1200px;
+            margin: auto;
+        }
+        .header-text{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align:center;
+        }
+        .header-text .text-section{
+            width: 70%;
+            padding-right: 4rem;
+        }
+        .header-text .text-section h1{
+            font-size: 5rem;
+            padding-bottom: 4rem;
+            width:50%;
+            margin: auto;
+        }
+        .header-text .text-section p{
+            font-size: 3rem;
+        }
+        .header-text .text-section span{
+            font-size: 3.5rem;
+            display: inline-block;
+            margin-top: 3rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200;
+            padding: 1rem 1.5rem;
+            border-bottom: 3px solid var(--main-color);
+        }
+        #header2-img{
+            height: 500px;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgb(119, 119, 119);
+        }
+        #about-item1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        #header1-img{
+            height: 500px;
+            display: inline-block;
+        }
+        .about-text{
+            display: inline-block;
+            align-items: center;
+            width: 70%;
+        }
+        .about-text h2{
+            font-size: 4rem;
+            padding-bottom: 1.5rem;
+        }
+        .about-text p{
+            font-size: 2rem;
+            padding:1rem 2rem;
+            text-align: center;
+        }
+        #about1-img{
+            height: 300px;
+        }
+        #about2-img{
+            height: 400px;
+        }
+        #footer{
+            background-color:rgb(241, 241, 241);;
+        }
+        .footer-col{
+            width: 33%;
+            text-align: center;
+            display: inline-block;
+            padding-top: 1rem;
+        }
+        .footer-col h1{
+            font-size:3rem;
+        }
+        .fl-links{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+        }
+        .fl-links li{
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--main-color);
+            display: inline-block;
+            min-width:11rem;
+            margin-top: 1rem;
+            border-radius: .5rem;
+            font-family: 'Open Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .fl-links li:hover{
+            background-color: white;
+            border:1px solid white;
+        }
+
+        .social-media-links a{
+            font-size: 3rem;
+            border: 1px solid var(--main-color);
+            color: rgb(41, 41, 41);
+            padding: 1rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            border-radius: 45%;
+            display: inline-block;
+            text-align: center;
+            transition: all .8s;
+        }
+        .social-media-links a:hover{
+            background-color: white;
+            border: 1px solid white;
+            transform: rotate(360deg);
+        }
+        #ins:hover{
+            color:rgb(201, 0, 184);
+        }
+        #dca:hover{
+            background-color:rgb(65, 65, 245);
+            color: white;
+        }
+        #gthub:hover{
+            color: black;
+        }
+        #ytb:hover{
+            color: red;
+        }
+        .my-team{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .my-team li{
+            font-size:2rem;   
+            padding-top: 1rem;  
+            border-bottom: 1px solid black;
+            font-family: 'Roboto', sans-serif;
+        }
+        .footer-bottom p{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        #ıknow-sec1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        .iknow-text{
+            width: 60%;
+            padding-right: 4rem;
+        }
+        .iknow-text h1{
+            font-size: 3rem;
+        }
+        .iknow-text p{
+            font-size: 2rem;
+            padding-top: 2rem;
+        }
+        .iknow-slider{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius:1rem;
+            box-shadow: 0 3px 20px rgba(92, 92, 92, .4), -3px -12px 20px rgba(92, 92, 92, .4);
+            height: 500px;
+            width: 400px;
+            max-width: 400px;
+            max-height: 600px;
+            position: relative;
+        }
+        .iknow-slider-text{
+            max-height: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .iknow-slider-title{
+            font-size:3rem;
+            padding-bottom: 2rem;
+        }
+        .iknow-slider-p{
+            font-size: 2.2rem;
+            padding-bottom: 1.5rem;
+        }
+        #ik-sl-img{
+            width:100%;
+            height:100%;
+        }
+        .iknow-slider-img{
+            width: 100%;
+            height: 250px;
+        }
+        .ik-arrow{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+        }
+        .ik-arrow i{
+            font-size: 4rem;
+            padding: 0 1rem;
+            transition: all 0.5s;
+        }
+        .ik-arrow i:hover{
+            color: rgb(65, 63, 63);
+        }
+        #ıknow-sec2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin: 0 1.5rem;
+        }
+        .iknow-slider2{
+            display: flex;
+            justify-content: center0;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid rgb(92, 92, 92);
+            border-radius:1rem;
+            box-shadow: 0 12px 20px rgb(92, 92, 92);
+        }
+        .iknow-slider-title2{
+            font-size:3rem;
+            padding: 2rem 0;
+        }
+        .iknow-slider-p2{
+            font-size: 2rem;
+            padding-bottom: 2rem;
+        }
+        .ik-sl-img2{
+            width:100%;
+        }
+        .ik-arrow2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ik-arrow2 i{
+            font-size: 4rem;
+            padding: 0 1rem;
+        }
+
+        .iknow-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+        }
+        .iknow-container i{
+            font-size: 3rem;
+            padding: 0 2rem;
+            transition: all 0.3s;
+        }
+        .iknow-container i:hover{
+            color: rgb(134, 130, 130);
+        }
+
+        #title-works-main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        .messages{
+            font-size:2rem;
+            padding: 1rem 1.5rem;
+            font-family: 'Roboto', sans-serif;
+        }
+        .contact-section{
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+
+        #messages-form{
+            width: 100%;
+        }
+
+        .form-control{
+            width: 65%;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid black;
+            margin: 1.5rem 1rem;
+            padding: .5rem;
+            font-size:1.5rem;
+        }
+        .form-control:focus{
+            outline: none;
+        }
+        .inputt3{
+            height:200px;
+            margin-top: 1rem;
+        }
+        #register-btn{
+            width: 100px;
+            height: 40px;
+            border: 1px solid black;
+            background-color: transparent;
+            font-size:2rem;
+            transition: all .5s;
+        }
+        #register-btn:hover{
+            background-color: black;
+            border-color: black;
+            color: #fff;
+        }
+
+        .other-contact-link{
+            padding:2rem 1rem;
+            box-shadow: 0 2px 10px rgba(199, 199, 199,.3), 0 -2px 10px rgba(138, 138, 138,.3);
+            display: flex;
+            flex-direction: column;
+            width:35%;
+            height:350px;
+            text-align: left;
+            align-items: center;
+        }
+        .email-contact-sec{
+            padding-bottom:3rem;
+        }
+        .contact-title{
+            font-size:2rem;
+            text-align:center;
+            padding-bottom: 2rem;
+        }
+        a.email-ctn{
+            font-size:1.5rem;
+            color: rgb(41, 41, 41);
+            margin-bottom:2rem;
+            transition: all .5s;
+        }
+        a.email-ctn:hover{
+            color: rgb(116, 116, 116);
+            border-bottom: 1px solid black;
+        }
+        .discord-link p span{
+            color: #4441e0;
+        }
+    </style>
+
+</head>
+<body>
+
+    {% include "includes/navbar.html" %}
+    <br><br><br><br><br><br>
+    <div class="container">
+        {% include "includes/messages.html" %}
+        {% block body %}
+        
+        {% endblock body %}
+    </div>
+    <br><br><br><br><br><br>
+    {% include "includes/footer.html" %}
+
+
+    
+    {% block script %}
+    
+    {% endblock script %}
+</body>
+</html>
