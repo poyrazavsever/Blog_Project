@@ -1,7 +1,6 @@
 from functools import wraps
 from logging import raiseExceptions
 import re
-from django.shortcuts import render
 from flask import Flask,render_template,flash,redirect,url_for,session,logging,request
 from flask.templating import render_template_string
 from flask.wrappers import Request
@@ -14,8 +13,14 @@ from werkzeug.utils import secure_filename
 
 
 app = Flask(__name__)
+# Login Form
+class LoginForm(Form):
 
-# Kullanıcı Kayıt Formu
+    username = StringField("Kullanıcı Adı")
+    question = StringField("Gittiğim Dershane İsmi")
+    password = PasswordField("Parola")
+
+# Contact Form
 class ContactForm(Form):
 
     name = StringField("İsminiz",validators = [validators.length(min = 4,max= 16)])

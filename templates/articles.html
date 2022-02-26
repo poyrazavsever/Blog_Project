@@ -5,7 +5,77 @@ Yazılar
 {% endblock title %}
 
 {% block body %}
+<div class="all-article-box">
+    <div class="articles-container">
+        <section class="art-promotion">
+            <div class="art-img-part">
+                <img src="{{ url_for('static', filename='img/blogtitle.png') }}" id="blog-image">
+            </div>
+            <div class="art-search">
+                <input type="text" id="art-search-int"
+                placeholder="Ara...">
+                <button id="search-btn">Ara</button>
+            </div>
+        </section>
 
+        <section class="art-link-dear">
+            <h3 class="links-main-title">Ana Başlıklar</h3>
+            <ul class="art-links">
+                <li><a href="#">Gündem</a></li>
+                <li><a href="#">Donanım</a></li>
+                <li><a href="#">Yazılım</a></li>
+                <li><a href="#">Tasarım</a></li>
+                <li><a href="#">Sosyal</a></li>
+            </ul>
+            <br>
+            <hr width="80%" style="margin: auto;">
+            <br>
+            <h3 class="links-main-title">Gündemdekiler</h3>
+            <ul class="art-links-ddas">
+                <li><a href="#">RTX 3050 Ekran Kartı!</a></li>
+                <li><a href="#">Ukrayna'da neler oluyor?</a></li>
+                <li><a href="#">Bu virüs ne zaman bitecek?</a></li>
+            </ul>
+            <br>
+        </section>
+
+    </div>
+
+
+    <div class="title-text-box">
+        <div class="article-card">
+            <h2 class="article-c-title">RTX 3050 geliyor!!!</h2>
+            <small class="article-c-smt">Evet son haberlere göre laptop ekran kartı RTX 3050 masaüstü bilgisayarlara geliyor!</small>
+            <p class="article-c-pt">1 saat önce "Vatan Bilgisayar"'da yakında sıfatı ile satışa çıkarıldı. 4200TL gibi bir fiyat ile yakında gözüküyor... </p>
+            <div class="frs-rab">
+                <div>
+                </div>
+                <button class="resume-art-btn">Devamı</button>
+            </div>
+        </div>
+        <div class="article-card">
+            <h2 class="article-c-title">Ukrayna ne olacak?</h2>
+            <small class="article-c-smt">Rusya durmadan bombalamaya devam ediyor. Bu gereksiz savaşı kimler durduracak?</small>
+            <p class="article-c-pt">Son haberler hiç iç açıcı değil ve son haberlere rağmen diğer ülkeler seyretmeye devam ediyor...</p>
+            <div class="frs-rab">
+                <div>
+                </div>
+                <button class="resume-art-btn">Devamı</button>
+            </div>
+        </div>
+        <div class="article-card">
+            <h2 class="article-c-title">Türkiye ekonomisi son durum,</h2>
+            <small class="article-c-smt">Uzmanlar dolar 18tl yi bulacak diyorlar!</small>
+            <p class="article-c-pt">Uzmanlar şuan son çalışmaları ile gerekli işler yapılmaz ise dolar 18 i bile geçebilir dedi...</p>
+            <div class="frs-rab">
+                <div>
+                </div>
+                <button class="resume-art-btn">Devamı</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
 {% endblock body %}
 
 {% block script %}
