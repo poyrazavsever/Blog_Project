@@ -1,7 +1,7 @@
-from crypt import methods
 from functools import wraps
 from logging import PlaceHolder, raiseExceptions
 import re
+from unicodedata import name
 from flask import Flask,render_template,flash,redirect,url_for,session,logging,request
 from flask.templating import render_template_string
 from flask.wrappers import Request
@@ -183,9 +183,10 @@ def logout():
     return redirect(url_for("index"))
 
 #Acount Page
-@app.route("/acount", methods = ["GET","POST"])
+@app.route("/acount")
 def acount():
     return render_template("acount.html")
+    
 
         
         

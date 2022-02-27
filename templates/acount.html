@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %} Hesap{% endblock title%}
+
+{% block body %}
+<div class="acount-page">
+    <h2 id="acount-main-title">Hoşgeldin {{ session["username"]}} ,</h2>
+    <div class="acount-about-page">
+        <div class="right-aap">
+            <img src="" alt="">
+        </div>
+        <div class="left-aap">
+            <br>
+            <p class="about-test-aap"><span class="header-aap">Hakkımda :</span> Kendini tanıt...</p>
+            <p class="about-test-aap"><span class="header-aap">Yeteneklerin :</span> Yeteneklerinden bahset</p>
+
+            <div class="edit-your-profile">
+                <button class="update-pp-btn">Bilgilerini Güncelle</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+{% block script %}
+
+{% endblock script %}
