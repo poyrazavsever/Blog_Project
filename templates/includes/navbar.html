@@ -21,13 +21,16 @@
     </div>
     <div class="navbar-sec">
         <ul class="navbar-right">
-            {% if session%}
+            {% if session["logged_in"]%}
             <li>
-                <a href="/acount">Admin Paneli</a>
+                <a href="/acount">Hesap</a>
+            </li>
+            <li>
+                <a href="/logout">Çıkış Yap</a>
             </li>
             {% else %}
             <li>
-                <a href="/login">Admin Giriş</a>
+                <a href="/login">Giriş</a>
             </li>
             {% endif %}
         </ul>
